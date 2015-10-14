@@ -66,10 +66,10 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![three-line MRZ](./readme_images/three_line_capture.jpg)   
 <br>
-6. Make sure the MRZ lines (either two-line or three-line document) falls within the rectangular box is as close as possible in order to capture MRZ data accurately.   
-7. The capturing screen displays a rectangular box in blue color (Figure 1) when it is not detecting any MRZ lines. The rectangular box turns to green (Figure 2) with a plus mark whenit detects the MRZ lines.   
+6. To capture MRZ data accurately, hold the document as close as possible to the camera and make sure the MRZ lines (either two-line or three-line document) fall within the rectangular box on the phonescreen.   
+7. The capturing screen displays a rectangular box in blue color (Figure 1) when it is not detecting any MRZ lines. The rectangular box turns to green (Figure 2) with a plus mark when it detects the MRZ lines.   
 8. The capturing screen automatically goes away under one of these three conditions:  
-    1. When the MRZ lines are successfully capture.  Result code value is RESULT_OK.  
+    1. When the MRZ lines are successfully captured.  Result code value is RESULT_OK.  
     2. When timeout has occurred and it returns the MRZ lines to the onActivityResult callback.  Timeout is currently set to 5 seconds. Result code value is RESULT_OK.  
     3. When an error occurred, it returns an error message in the onActivityResult callback. Result code value is RESULT_CANCELED.   
  
@@ -132,10 +132,10 @@ check=2}
 In our sample code, the mrzElements string result in the onActivityResult method is parsed and displayed on the Xavier Passport or ID result form.   
 
 ####Handling unknown document type   
-For demoing purposes, when the MRZ result (mrzElements string) is returned, the documentType key may have invalid Document Type value due to the OCRing error, the demo sample code has modules thathelps to salvage the unknown document type MRZ lines by displaying the Document Type Selection Activity to allow the user to select the Document Type from the dropdown option list. This code is demonstrated in the processMrzResult method of the MainActivity.   
+For demoing purposes, when the MRZ result (mrzElements string) is returned, the documentType key may have an invalid Document Type value due to an OCRing error.  The demo sample code has modules that salvage the unknown document type.  In this case, the Document Type is selected from the dropdown list. This code is demonstrated in the processMrzResult method of the MainActivity.   
 
 ####Error Handling  
-When an error occurred, the errorMessage string in the onActivityResult callback method have the detailed description and stack trace of the error. The error message contains the following information:    
+When an error occurrs, the errorMessage string in the onActivityResult callback method has the detailed description and stack trace of the error. The error message contains the following information:    
 
 *   Stack trace
 *  Error cause
