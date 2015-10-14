@@ -137,10 +137,10 @@ For demoing purposes, when the MRZ result (mrzElements string) is returned, the 
 ####Error Handling  
 When an error occurrs, the errorMessage string in the onActivityResult callback method has the detailed description and stack trace of the error. The error message contains the following information:    
 
-*   Stack trace
+*  Stack trace
 *  Error cause
-* Device: Brand, Device Name, Model, Id, and Product
-* Firmware: SDK, Release, and Incremental  
+*  Device: Brand, Device Name, Model, Id, and Product
+*  Firmware: SDK, Release, and Incremental  
 
 ####Additional Information  
 Please feel free to contact us at xavier@simoncomputing.com for any questions.
