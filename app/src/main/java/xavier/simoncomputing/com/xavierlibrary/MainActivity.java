@@ -91,8 +91,8 @@ public class MainActivity extends FragmentActivity {
         // Please go to http://www.simoncomputing.com/main/xavier/ to request for
         // an evaluation or production license key
         // ----------------------------------------------------------------------
-        intent.putExtra(XavierActivity.LICENSE_KEY, "E000000000");
-        intent.putExtra(XavierActivity.EMAIL_ADDRESS, "my_email_address@gmail.com");
+        intent.putExtra(XavierActivity.LICENSE_KEY, "E12345678");
+        intent.putExtra(XavierActivity.EMAIL_ADDRESS, "test@hotmail.com");
 
         startActivityForResult(intent, MRZ_REQUEST);
 
