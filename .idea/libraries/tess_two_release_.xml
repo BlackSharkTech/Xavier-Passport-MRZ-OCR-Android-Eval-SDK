@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="tess-two-release-">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/tess-two-release/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/tess-two-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
