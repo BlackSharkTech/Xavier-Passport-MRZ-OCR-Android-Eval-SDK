@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Looper;
 import android.support.v4.app.FragmentActivity;
@@ -14,10 +13,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
 import xavier.simoncomputing.com.xavierlib.XavierActivity;
+import xmlwise.Plist;
 
 
 public class MainActivity extends FragmentActivity {
@@ -49,7 +52,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         mDocumentTypeInflaterLayout = (LinearLayout) findViewById(R.id.documentTypeInflaterLayout);
 
@@ -65,6 +68,8 @@ public class MainActivity extends FragmentActivity {
 
             }
         });
+
+
 
         // Stop button
         // -----------
@@ -87,12 +92,34 @@ public class MainActivity extends FragmentActivity {
         Intent intent = new Intent(MainActivity.this, XavierActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
+        HashMap<String, Object> properties = null;
+        try {
+            InputStream inputStream =getResources().openRawResource(R.raw.xavier);
+            BufferedReader br = null;
+            try {
+                br = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder sb = new StringBuilder();
+                String line;
+                while ((line = br.readLine()) != null) {
+                    sb.append(line);
+                }
+                properties = (HashMap<String, Object>)Plist.fromXml(sb.toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                br.close();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
         // WARNING: This is not a valid key !
         // Please go to http://www.simoncomputing.com/main/xavier/ to request for
         // an evaluation or production license key
         // ----------------------------------------------------------------------
-        intent.putExtra(XavierActivity.LICENSE_KEY, "E12345678");
-        intent.putExtra(XavierActivity.EMAIL_ADDRESS, "test@hotmail.com");
+//        intent.putExtra(XavierActivity.LICENSE_KEY, "E12345678");
+//        intent.putExtra(XavierActivity.EMAIL_ADDRESS, "test@hotmail.com");
+        intent.putExtra(XavierActivity.SETTINGS, properties);
 
         startActivityForResult(intent, MRZ_REQUEST);
 

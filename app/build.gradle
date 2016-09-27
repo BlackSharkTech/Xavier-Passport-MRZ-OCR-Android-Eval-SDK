@@ -31,10 +31,9 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.0.0'
-    compile (name:'xavierlib-release', ext:'aar')
-    compile (name:'tess-two-release', ext:'aar')
-
-
+    compile(name: 'xavierlib-release', ext: 'aar')
+    compile(name: 'tess-two-release', ext: 'aar')
+    compile files('libs/xmlwise-1_2.jar')
 }

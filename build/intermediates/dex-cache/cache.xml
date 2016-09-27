@@ -2,60 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/vinhnguyen/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.0.0_c063a6599432d300220443f397ae74b147b2fa35/classes.dex" />
-    </item>
-    <item
-        jar="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="12e933a52eb4b4cb8864e86b434cc2ab44bb22a9">
-        <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_12754f38a67db65c7952056e44e6d7ec0b113674/classes.dex" />
-    </item>
-    <item
         jar="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/exploded-aar/xavierlib-release/jars/classes.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="68aa2006065831665d1692a43290d34144105fb0">
+        sha1="1ffbeb1db4bbefb1db2324b350624fa382650f08">
         <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-xavierlib-release_ab8ad6b60a1a9386e53118916a7932e9860417e1/classes.dex" />
-    </item>
-    <item
-        jar="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/exploded-aar/tess-two-release/jars/classes.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="2d104593ef37030b7922bc80af557961e87b075a">
-        <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-tess-two-release_31f553a2c8611a2d1d346e6249fa1db763ca5961/classes.dex" />
-    </item>
-    <item
-        jar="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/jars/classes.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-22.0.0_a3b55fb906c7df660478bd86417e70a9e687ea10/classes.dex" />
-    </item>
-    <item
-        jar="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-22.0.0_4e44c3a1233816b200092559e483368f7c1697ec/classes.dex" />
-    </item>
-    <item
-        jar="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="02ef10a92fef102f1826664a7eb4ea58f2a96abc">
-        <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ae232ccdcd3950b460a287dcf6565f4c33a88a40/classes.dex" />
-    </item>
-    <item
-        jar="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/vinhnguyen/Public-Xavier-Android-Eval-SDK/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.0.0_ce4311b1c7800f266fb3ad04e4a39139aa9726e3/classes.dex" />
     </item>
 
 </items>

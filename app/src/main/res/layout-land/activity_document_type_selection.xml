@@ -1,0 +1,71 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+            <TextView
+                android:text="Select Document Type : "
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/documentTypeSpinner"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="35dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+            <Button
+                android:text="Submit"
+                android:clickable="true"
+                android:id="@+id/submit"
+                android:onClick="submit"
+                android:layout_marginRight="50dp"
+                android:layout_height="50dp"
+                android:layout_width="120dp"
+                />
+            <Button
+                android:text="Cancel"
+                android:clickable="true"
+                android:id="@+id/cancel"
+                android:onClick="cancel"
+                android:layout_height="50dp"
+                android:layout_width="120dp"
+                />
+
+        </LinearLayout>
+        </TableRow>
+
+
+</TableLayout>
+
+
