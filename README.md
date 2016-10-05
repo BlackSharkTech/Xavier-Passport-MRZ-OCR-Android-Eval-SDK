@@ -142,7 +142,18 @@ When an error occurrs, the errorMessage string in the onActivityResult callback 
 *  Stack trace
 *  Error cause
 *  Device: Brand, Device Name, Model, Id, and Product
-*  Firmware: SDK, Release, and Incremental  
+*  Firmware: SDK, Release, and Incremental
+
+####Xavier.plist
+Xavier.plist has been introduced as part of the Xavier SDK package. It must be added to any projects utilizing the Xavier library.
+
+The plist contains the following fields:<br/>
+i. Email Address: The email one registers with SimonComputing to generate the license key<br/>
+ii. License Key: The license key obtained from SimonComputing to enable Xavier<br/>
+iii. Portrait Mode: Specify whether Xavier should be used in portrait mode (this is currently under development)<br/>
+iv. previewing UIColor: Specify the color of the preview box for the Xavier widget. The value has to be a hex value for color<br/>
+v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be a hex value for color<br/>
+vi. close button text: Specify the display text of the close button on the Xavier widget<br/> 
 
 ####Additional Information  
 Please feel free to contact us at xavier@simoncomputing.com for any questions.
