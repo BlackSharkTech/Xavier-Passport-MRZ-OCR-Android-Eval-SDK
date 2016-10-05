@@ -42,4 +42,4 @@ captures/
 *.jks
 
 # plist
-*.plist
+src/main/res/raw/*.plist
