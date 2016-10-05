@@ -48,7 +48,9 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 ####Getting the latest Xavier Evaluation SDK from GitHub  
 
 1. On the right hand corner of the GitHub Xavier Evaluation SDK page, click the &quot;Clone In Desktop&quot; button to download the Xavier Evaluation SDK project. This is a self contained Xavier Evaluation project which has all the components for you to run the demo application on the Android phone. It also contains the two dependency libraries (xavier-release.aar and tess-two-release.aar).  
-2. After the Xavier Evaluation SDK cloning is completed, open Android Studio IDE. Go to File menu and select Open and go to the cloned Xavier Evaluation SDK folder to open the Xavier Evaluation SDK project.   
+2. After the Xavier Evaluation SDK cloning is completed, open Android Studio IDE. Go to File menu and select Open and go to the cloned Xavier Evaluation SDK folder to open the Xavier Evaluation SDK project.
+3. Copy the file Xavier.plist from folder "Setting file" to the folder app\src\main\res\raw\ <br/>
+&nbsp;<i>NOTE:</i> For consistency with the iOS version and convienience, the Android app will now also require the file Xavier.plist to run properly. This file is a simple xml file that contains all external settings for Xavier.      
 
 ####Running Xavier Evaluation SDK application on the Android phone  
 1. Connect the Android phone to your laptop via the USB connection. 
