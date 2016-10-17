@@ -94,6 +94,7 @@ public class MainActivity extends FragmentActivity {
 
         HashMap<String, Object> properties = null;
         try {
+            // Please refer to README for further instruction on how to create the raw xavier file
             InputStream inputStream =getResources().openRawResource(R.raw.xavier);
             BufferedReader br = null;
             try {
