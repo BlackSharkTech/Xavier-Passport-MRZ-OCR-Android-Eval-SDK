@@ -3,8 +3,8 @@
 
 ### Xavier Android Integration Manual  
 <br>
-####For Xavier Android SDK 1.0, September 2015   
-####By SimonComputing Inc.  5350 Shawnee Road, Suite 200  Alexandria, VA 22312    
+####For Xavier Android SDK 1.0, March 2017   
+####By Blackshark Tech, 6811 Spout Ln, Fairfax Station, VA 22039    
 <br>
 **Description**  
 
@@ -16,13 +16,7 @@ The Xavier SDK contains a demo application that demonstrates the API calls you c
 * Visa, Resident Alien, Commuter  
 * Re-Entry Permit  
 
-The Xavier SDK is capable of scanning the travel document via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.  
-
-To test out the Xavier application on your Android phone, you can follow the link below to download it from Google Play:
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-[https://play.google.com/store/apps/details?id=xavier.simoncomputing.com.xavierlibrary](https://play.google.com/store/apps/details?id=xavier.simoncomputing.com.xavierlibrary) 
-
+The Xavier SDK is capable of scanning the travel document via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.
 
 To integrate the Xavier SDK into your project, you need two Android libraries located in the app libs folder:  
 
@@ -39,11 +33,11 @@ The Xavier Evaluation SDK has been successfully tested on both Lollipop and KitK
 
 The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  You may go to the below link below to request for your key  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.simoncomputing.com/main/xavier](http://www.simoncomputing.com/main/xavier)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.blacksharktech.com](http://www.blacksharktech.com)   
 
 You need to specify an email address to receive the generated key.  There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
 
-The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact SimonComputing Inc. email address xavier@simoncomputing.com for a production license version of Xavier  
+The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact BlackShark Tech email address sales.info@blacksharktech.com for a production license version of Xavier  
 
 ####Getting the latest Xavier Evaluation SDK from GitHub  
 
@@ -82,7 +76,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 Intentintent = new Intent(MainActivity.this, XavierActivity.class);    
 intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);    
 
-// Please go to http://www.simoncomputing.com/main/xavier to request for
+// Please email sales.info@blacksharktech.com to request for
 // an evaluation or production license key.
 // ----------------------------------------------------------------------
 intent.putExtra(XavierActivity.LICENSE_KEY, "E000000000");
@@ -148,15 +142,15 @@ When an error occurrs, the errorMessage string in the onActivityResult callback 
 Xavier.plist has been introduced as part of the Xavier SDK package. It must be added to any projects utilizing the Xavier library.
 
 The plist contains the following fields:<br/>
-i. Email Address: The email one registers with SimonComputing to generate the license key<br/>
-ii. License Key: The license key obtained from SimonComputing to enable Xavier<br/>
+i. Email Address: The email one registers with BlackShark Tech to generate the license key<br/>
+ii. License Key: The license key obtained from BlackShark Tech to enable Xavier<br/>
 iii. Portrait Mode: Specify whether Xavier should be used in portrait mode (this is currently under development)<br/>
 iv. previewing UIColor: Specify the color of the preview box for the Xavier widget. The value has to be a hex value for color<br/>
 v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be a hex value for color<br/>
 vi. close button text: Specify the display text of the close button on the Xavier widget<br/> 
 
 ####Additional Information  
-Please feel free to contact us at xavier@simoncomputing.com for any questions.
+Please feel free to contact us at info@blacksharktech.com for any questions.
 
 #####Release Notes 
 1.0.0    
@@ -164,7 +158,7 @@ Initial release of Xavier Evaluation SDK
 <br>
 <br>
 <br>
-© 2015 SimonComputing Inc. All Rights Reserved.
+© 2017 BlackShark Tech All Rights Reserved.
 
 
 
