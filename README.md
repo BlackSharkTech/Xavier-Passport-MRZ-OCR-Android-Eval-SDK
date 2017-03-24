@@ -31,13 +31,11 @@ The Xavier Evaluation SDK has been successfully tested on both Lollipop and KitK
 * Samsung Galaxy (S4, S5, S6)
 * Google Nexus 6.  
 
-The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  You may go to the below link below to request for your key  
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[http://www.blacksharktech.com](http://www.blacksharktech.com)   
+The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  Please contact BlackShark Tech at sales@blacksharktech.com to request an evaluation key.
 
 You need to specify an email address to receive the generated key.  There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
 
-The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact BlackShark Tech email address sales.info@blacksharktech.com for a production license version of Xavier  
+The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact BlackShark Tech email address sales@blacksharktech.com for a production license version of Xavier  
 
 ####Getting the latest Xavier Evaluation SDK from GitHub  
 
@@ -76,7 +74,7 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
 Intentintent = new Intent(MainActivity.this, XavierActivity.class);    
 intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);    
 
-// Please email sales.info@blacksharktech.com to request for
+// Please email sales@blacksharktech.com to request for
 // an evaluation or production license key.
 // ----------------------------------------------------------------------
 intent.putExtra(XavierActivity.LICENSE_KEY, "E000000000");
