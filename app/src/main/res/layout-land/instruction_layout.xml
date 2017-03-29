@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <!-- capture demo -->
-        <xavier.simoncomputing.com.xavierlibrary.instructions.DemoVideoView
+        <xavier.blacksharktech.com.xavierlibrary.instructions.DemoVideoView
                 android:id="@+id/demo_video_view"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"

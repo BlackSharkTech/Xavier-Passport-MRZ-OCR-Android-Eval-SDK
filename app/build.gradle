@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "xavier.simoncomputing.com.xavierlibrary"
+        applicationId "xavier.blacksharktech.com.xavierlibrary"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
 
@@ -35,5 +35,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.0.0'
     compile(name: 'xavierlib-release', ext: 'aar')
     compile(name: 'tess-two-release', ext: 'aar')
-    compile files('libs/xmlwise-1_2.jar')
 }
