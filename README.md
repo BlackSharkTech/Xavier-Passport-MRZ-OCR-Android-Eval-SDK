@@ -3,12 +3,12 @@
 
 ### Xavier Mrz SDK Android Integration Manual  
 <br>
-####For Xavier Mrz Android SDK 1.0, March 2017   
-####By Blackshark Tech, 6811 Spout Ln, Fairfax Station, VA 22039    
+#### For Xavier Mrz Android SDK 1.0, March 2017   
+#### By Blackshark Tech, 6811 Spout Ln, Fairfax Station, VA 22039    
 <br>
 **Description**  
 
-The Xavier Mrz SDK contains a demo application that demonstrates the API calls you can use to interact with the Xavier Library. The Xavier Mrz SDK is an Android SDK that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier Mrz SDK can process are:
+The Xavier MRZ SDK contains a demo application that demonstrates the API calls you can use to interact with the Xavier Library. The Xavier MRZ SDK is an Android SDK that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier MRZ SDK can process are:
 <br>
 
 * Passport  
@@ -16,14 +16,14 @@ The Xavier Mrz SDK contains a demo application that demonstrates the API calls y
 * Visa, Resident Alien, Commuter  
 * Re-Entry Permit  
 
-The Xavier Mrz SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier Mrz SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.
+The Xavier MRZ SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier MRZ SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.
 
-To integrate the Xavier Mrz SDK into your project, you need two Android libraries located in the app libs folder:  
+To integrate the Xavier MRZ SDK into your project, you need two Android libraries located in the app libs folder:  
 
 * xavier-release.aar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the Xavier library
 * tess-two-release.aar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the Google Leptonica library  
 
-The provided demo project was created using <b>Android Studio IDE version 1.2.2</b>. Please follow the instructions below on setting up and running the Xavier SDK demo application in Android Studio IDE. Android Studio IDE version 1.2.2 was used to develop the Xavier Evaluation SDK and the demo application. The project is configured to compile at Android API level 22 (Lollipop) andthe minimum Android API level is set to 14 (Ice Scream Sandwich).  
+The provided demo project was created using <b>Android Studio IDE version 1.2.2</b>. Please follow the instructions below on setting up and running the Xavier MRZ SDK demo application in Android Studio IDE. Android Studio IDE version 1.2.2 was used to develop the Xavier Evaluation SDK and the demo application. The project is configured to compile at Android API level 22 (Lollipop) andthe minimum Android API level is set to 14 (Ice Scream Sandwich).  
 
 The Xavier Evaluation SDK has been successfully tested on both Lollipop and KitKat Android operating systems. The Xavier Evaluation SDK has been tested on the following Android phones  
 
@@ -33,7 +33,7 @@ The Xavier Evaluation SDK has been successfully tested on both Lollipop and KitK
 
 The Xavier Evaluation SDK will require a key and the email address registered to that key to operate.  Please contact BlackShark Tech at sales@blacksharktech.com to request an evaluation key.
 
-You need to specify an email address to receive the generated key.  There is no obligation to purchase the Xavier SDK.  We invite you to explore and try it out for free.  
+You need to specify an email address to receive the generated key.  There is no obligation to purchase the Xavier MRZ SDK.  We invite you to explore and try it out for free.  
 
 The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact BlackShark Tech email address sales@blacksharktech.com for a production license version of Xavier  
 
