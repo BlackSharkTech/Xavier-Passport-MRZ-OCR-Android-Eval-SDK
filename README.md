@@ -1,14 +1,14 @@
 ![Xavier Logo](./readme_images/passport_scanning_simplified.jpg)  
 ![Xavier Logo](./readme_images/xavier_logo.jpg)  
 
-### Xavier Android Integration Manual  
+### Xavier Mrz SDK Android Integration Manual  
 <br>
-####For Xavier Android SDK 1.0, March 2017   
+####For Xavier Mrz Android SDK 1.0, March 2017   
 ####By Blackshark Tech, 6811 Spout Ln, Fairfax Station, VA 22039    
 <br>
 **Description**  
 
-The Xavier SDK contains a demo application that demonstrates the API calls you can use to interact with the Xavier Library. The Xavier SDK is an Android SDK that enables the developers to integrate the ability to scan International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier SDK can process are:
+The Xavier Mrz SDK contains a demo application that demonstrates the API calls you can use to interact with the Xavier Library. The Xavier Mrz SDK is an Android SDK that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier Mrz SDK can process are:
 <br>
 
 * Passport  
@@ -16,9 +16,9 @@ The Xavier SDK contains a demo application that demonstrates the API calls you c
 * Visa, Resident Alien, Commuter  
 * Re-Entry Permit  
 
-The Xavier SDK is capable of scanning the travel document via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.
+The Xavier Mrz SDK is capable of performing OCR on travel documents via the native camera to extract all the Machine Readable Zone (MRZ) fields from the travel documents. Xavier Mrz SDK performs auto capture when the quality threshold is reached or timeout occurred. The resulting  data are returned as key-value pair elements.
 
-To integrate the Xavier SDK into your project, you need two Android libraries located in the app libs folder:  
+To integrate the Xavier Mrz SDK into your project, you need two Android libraries located in the app libs folder:  
 
 * xavier-release.aar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the Xavier library
 * tess-two-release.aar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the Google Leptonica library  
