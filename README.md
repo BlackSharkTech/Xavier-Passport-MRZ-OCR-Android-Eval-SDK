@@ -142,17 +142,18 @@ Xavier.plist has been introduced as part of the Xavier SDK package. It must be a
 The plist contains the following fields:<br/>
 i. Email Address: The email one registers with BlackShark Tech to generate the license key<br/>
 ii. License Key: The license key obtained from BlackShark Tech to enable Xavier<br/>
-iii. Portrait Mode: Specify whether Xavier should be used in portrait mode (this is currently under development)<br/>
-iv. previewing UIColor: Specify the color of the preview box for the Xavier widget. The value has to be a hex value for color<br/>
-v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be a hex value for color<br/>
-vi. close button text: Specify the display text of the close button on the Xavier widget<br/> 
-vii. Max Mrz Candidates: Specify the maximum number of MRZ candidates that the engine need to create the composite
-viii. Max Ocr Timeout: Specify the maximum duration that the enginge will run
+iii. previewing UIColor: Specify the color of the preview box for the Xavier widget. The value has to be a hex value for color<br/>
+iv. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be a hex value for color<br/>
+v. close button text: Specify the display text of the close button on the Xavier widget<br/> 
+vi. Max Mrz Candidates: Specify the maximum number of MRZ candidates that the engine need to create the composite
+vii. Max Ocr Timeout: Specify the maximum duration that the enginge will run
 
 ####Additional Information  
 Please feel free to contact us at info@blacksharktech.com for any questions.
 
 #####Release Notes 
+1.1.0
+Add more properties for customization
 1.0.0    
 Initial release of Xavier Evaluation SDK  
 <br>
