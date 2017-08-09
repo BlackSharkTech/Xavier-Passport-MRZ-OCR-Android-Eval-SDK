@@ -146,6 +146,8 @@ iii. Portrait Mode: Specify whether Xavier should be used in portrait mode (this
 iv. previewing UIColor: Specify the color of the preview box for the Xavier widget. The value has to be a hex value for color<br/>
 v. mrz detected UIColor: Specify the color of the preview box when the target MRZ is detected. The value has to be a hex value for color<br/>
 vi. close button text: Specify the display text of the close button on the Xavier widget<br/> 
+vii. Max Mrz Candidates: Specify the maximum number of MRZ candidates that the engine need to create the composite
+viii. Max Ocr Timeout: Specify the maximum duration that the enginge will run
 
 ####Additional Information  
 Please feel free to contact us at info@blacksharktech.com for any questions.
