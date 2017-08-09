@@ -2,19 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>target capture</key>
-	<string>mrz</string>
-	<key>previewing UIColor</key>
-	<string>blueColor or any other [UIColor]</string>
-	<key>mrz detected UIColor</key>
-	<string>greenColor or any other [UIColor]</string>
+	<key>Maximum MRZ candidates</key>
+	<integer>50</integer>
+	<key>OCR Timeout</key>
+	<integer>20</integer>
+	<key>previewing Color</key>
+	<string>#0000ff</string>
+	<key>mrz detected Color</key>
+	<string>#008000</string>
 	<key>close button text</key>
 	<string>Close</string>
 	<key>email address</key>
 	<string>test@hotmail.com</string>
 	<key>license key</key>
 	<string>E12345678</string>
-	<key>portrait mode</key>
 	<true/>
 </dict>
 </plist>
