@@ -118,12 +118,6 @@ public class MainActivity extends FragmentActivity {
             ex.printStackTrace();
         }
 
-        // WARNING: This is not a valid key !
-        // Please go to http://www.simoncomputing.com/main/xavier/ to request for
-        // an evaluation or production license key
-        // ----------------------------------------------------------------------
-//        intent.putExtra(XavierActivity.LICENSE_KEY, "E12345678");
-//        intent.putExtra(XavierActivity.EMAIL_ADDRESS, "test@hotmail.com");
         intent.putExtra(XavierActivity.SETTINGS, properties);
 
         startActivityForResult(intent, MRZ_REQUEST);
