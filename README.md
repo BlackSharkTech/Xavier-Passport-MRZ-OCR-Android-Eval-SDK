@@ -1,11 +1,9 @@
 ![Xavier Logo](./readme_images/passport_scanning_simplified.jpg)  
 ![Xavier Logo](./readme_images/xavier_logo.jpg)  
 
-### Xavier Mrz SDK Android Integration Manual  
-<br>
-#### For Xavier Mrz Android SDK 1.0, March 2017   
-#### By Blackshark Tech, 6811 Spout Ln, Fairfax Station, VA 22039    
-<br>
+### Xavier Mrz SDK Android Integration Manual<br>
+#### For Xavier Mrz Android SDK 1.2, October 2017<br>  
+#### By Blackshark Tech, 6811 Spout Ln, Fairfax Station, VA 22039<br>
 **Description**  
 
 The Xavier MRZ SDK contains a demo application that demonstrates the API calls you can use to interact with the Xavier Library. The Xavier MRZ SDK is an Android SDK that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier MRZ SDK can process are:
@@ -37,14 +35,14 @@ You need to specify an email address to receive the generated key.  There is no 
 
 The Xavier Evaluation SDK displays a random pop-up screen to indicate that this is an evaluation version. Please contact BlackShark Tech email address sales@blacksharktech.com for a production license version of Xavier  
 
-####Getting the latest Xavier Evaluation SDK from GitHub  
+#### Getting the latest Xavier Evaluation SDK from GitHub  
 
 1. On the right hand corner of the GitHub Xavier Evaluation SDK page, click the &quot;Clone In Desktop&quot; button to download the Xavier Evaluation SDK project. This is a self contained Xavier Evaluation project which has all the components for you to run the demo application on the Android phone. It also contains the two dependency libraries (xavier-release.aar and tess-two-release.aar).  
 2. After the Xavier Evaluation SDK cloning is completed, open Android Studio IDE. Go to File menu and select Open and go to the cloned Xavier Evaluation SDK folder to open the Xavier Evaluation SDK project.
 3. Copy the file Xavier.plist from folder "Setting file" to the folder app\src\main\res\raw\ <br/>
 &nbsp;<i>NOTE:</i> For consistency with the iOS version and convienience, the Android app will now also require the file Xavier.plist to run properly. This file is a simple xml file that contains all external settings for Xavier.      
 
-####Running Xavier Evaluation SDK application on the Android phone  
+#### Running Xavier Evaluation SDK application on the Android phone  
 1. Connect the Android phone to your laptop via the USB connection. 
 2.  Before running the Xavier Evaluation SDK demo application from the Android Studio IDE, make sure the Android phone USB debugging option checkbox option in Settings is selected.   
 ![USB Debugging Option](./readme_images/developer_option.jpg)   
@@ -68,21 +66,45 @@ The Xavier Evaluation SDK displays a random pop-up screen to indicate that this 
     3. When an error occurred, it returns an error message in the onActivityResult callback. Result code value is RESULT_CANCELED.   
  
  <br>
-####Xavier Library Integration Code    
-#####1. Starting up Xavier capturing screen  
+ 
+##### Xavier Library Integration Code<br>
+
+##### 1. Starting up Xavier capturing screen<br>
+Note: Please import xmlwise.Plist as well
 <pre><code>
-Intentintent = new Intent(MainActivity.this, XavierActivity.class);    
-intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);    
+	Intentintent = new Intent(MainActivity.this, XavierActivity.class);    
+	intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);    
 
-// Please email sales@blacksharktech.com to request for
-// an evaluation or production license key.
-// ----------------------------------------------------------------------
-intent.putExtra(XavierActivity.LICENSE_KEY, "E000000000");
-intent.putExtra(XavierActivity.EMAIL_ADDRESS, "your_email_address@gmail.com");
+	// Please email sales@blacksharktech.com to request for
+	// an evaluation or production license key.
+	// ----------------------------------------------------------------------
+        HashMap<String, Object> properties = null;
+        try {
+            // Please refer to README for further instruction on how to create the raw xavier file
+            InputStream inputStream =getResources().openRawResource(xavier);
+            BufferedReader br = null;
+            try {
+                br = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuilder sb = new StringBuilder();
+                String line;
+                while ((line = br.readLine()) != null) {
+                    sb.append(line);
+                }
+                properties = (HashMap<String, Object>) Plist.fromXml(sb.toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                br.close();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
+        intent.putExtra(XavierActivity.SETTINGS, properties);
 
-startActivityForResult(intent,MRZ_REQUEST)   
+	startActivityForResult(intent,MRZ_REQUEST)   
 </code></pre>
-#####2. The MainActivity receives MRZ results in the onActivityResult callback.   
+##### 2. The MainActivity receives MRZ results in the onActivityResult callback.   
 <pre><code>
 protected void onActivityResult(int requestCode,int resultCode,Intent data{    
 		super.onActivityResult(requestCode, resultCode,data);    
@@ -105,7 +127,7 @@ protected void onActivityResult(int requestCode,int resultCode,Intent data{
 } 
 </code></pre>
 
-####Sample MRZ result data   
+#### Sample MRZ result data   
 Here is the value of the mrzElements string which contains all the parsed MRZ elements in the onActivityResult method demo code when the MRZ capture is completed and onActivityResult callback is called:  
 {documentType=P,   
 subtype=&lt;,  
@@ -125,10 +147,10 @@ check=2}
 
 In our sample code, the mrzElements string result in the onActivityResult method is parsed and displayed on the Xavier Passport or ID result form.   
 
-####Handling unknown document type   
+#### Handling unknown document type   
 For demoing purposes, when the MRZ result (mrzElements string) is returned, the documentType key may have an invalid Document Type value due to an OCRing error.  The demo sample code has modules that salvage the unknown document type.  In this case, the Document Type is selected from the dropdown list. This code is demonstrated in the processMrzResult method of the MainActivity.   
 
-####Error Handling  
+#### Error Handling  
 When an error occurrs, the errorMessage string in the onActivityResult callback method has the detailed description and stack trace of the error. The error message contains the following information:    
 
 *  Stack trace
@@ -136,7 +158,7 @@ When an error occurrs, the errorMessage string in the onActivityResult callback 
 *  Device: Brand, Device Name, Model, Id, and Product
 *  Firmware: SDK, Release, and Incremental
 
-####Xavier.plist
+#### Xavier.plist
 Xavier.plist has been introduced as part of the Xavier SDK package. It must be added to any projects utilizing the Xavier library.
 
 The plist contains the following fields:<br/>
@@ -148,13 +170,16 @@ v. close button text: Specify the display text of the close button on the Xavier
 vi. Max Mrz Candidates: Specify the maximum number of MRZ candidates that the engine need to create the composite
 vii. Max Ocr Timeout: Specify the maximum duration that the enginge will run
 
-####Additional Information  
+#### Additional Information  
 Please feel free to contact us at info@blacksharktech.com for any questions.
 
-#####Release Notes 
-1.1.0
-Add more properties for customization
-1.0.0    
+##### Release Notes 
+1.2<br>
+* Enhance performance
+* Bug fixes<br>
+1.1.0<br>
+Add more properties for customization<br>
+1.0.0<br>    
 Initial release of Xavier Evaluation SDK  
 <br>
 <br>
