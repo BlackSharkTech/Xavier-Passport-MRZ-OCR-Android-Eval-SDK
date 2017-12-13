@@ -174,6 +174,9 @@ vii. Max Ocr Timeout: Specify the maximum duration that the enginge will run
 Please feel free to contact us at info@blacksharktech.com for any questions.
 
 ##### Release Notes 
+1.3<br>
+* Continue to improve stability and accuracy
+* Bug fixes<br>
 1.2<br>
 * Enhance performance
 * Bug fixes<br>
