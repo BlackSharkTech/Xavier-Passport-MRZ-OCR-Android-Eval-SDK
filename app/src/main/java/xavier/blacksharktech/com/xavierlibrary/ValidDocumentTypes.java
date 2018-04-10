@@ -1,6 +1,6 @@
 package xavier.blacksharktech.com.xavierlibrary;
 
-public enum ValidDocumentTypes {PASSPORT_DOC_TYPE("P"), ID_DOC_TYPE("ID"), UNKNOWN("UNKNOWN");
+public enum ValidDocumentTypes {PASSPORT_DOC_TYPE("P"), ID_DOC_TYPE("ID"), UNKNOWN("UNKNOWN"), BARCODE("B");
 
     private String mValue;
 

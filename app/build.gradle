@@ -6,16 +6,15 @@ android {
 
     defaultConfig {
         applicationId "xavier.blacksharktech.com.xavierlibrary"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-
+        versionCode 10
+        versionName "1.4"
     }
     buildTypes {
         release {
             minifyEnabled false
-            shrinkResources true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -28,11 +27,17 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     compile(name: 'xavierlib-release', ext: 'aar')
     compile(name: 'tess-two-release', ext: 'aar')
+    compile 'com.google.android.gms:play-services-vision:12.0.0'
+
 }

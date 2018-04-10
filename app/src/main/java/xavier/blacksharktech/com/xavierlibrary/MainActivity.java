@@ -36,6 +36,7 @@ public class MainActivity extends FragmentActivity {
     public static final String PASSPORT_DOC_TYPE = "P";
     public static final String ID_DOC_TYPE = "ID";
 
+
     public static final int MRZ_REQUEST = 1;
     public static final int USER_DOCTYPE_SELECTION_REQUEST = 2;
 
@@ -223,9 +224,16 @@ public class MainActivity extends FragmentActivity {
         Log.d(LOG_TAG, "Received MRZ Result from Xavier Library: \n");
         Log.d(LOG_TAG, mrzElements);
 
-        // Start parsing the MRZ string elements
-        mrzElements = mrzElements.substring(1, mrzElements.length() - 1);
-        HashMap<String, String> mrzKeyValueMap = parseMrzString(mrzElements);
+        HashMap<String, String> mrzKeyValueMap = new HashMap<>();
+
+        if (!mrzElements.contains("documentType")) {
+            mrzKeyValueMap.put("barcode", mrzElements);
+            mrzKeyValueMap.put("documentType", "B");
+        } else {
+            // Start parsing the MRZ string elements
+            mrzElements = mrzElements.substring(1, mrzElements.length() - 1);
+            mrzKeyValueMap = parseMrzString(mrzElements);
+        }
 
 
         // Inflate the view accordingly, if for some reasons the parsed data has errors and
@@ -292,6 +300,8 @@ public class MainActivity extends FragmentActivity {
 
             inflateIDLayout(mrzKeyValueMap);
 
+        } else if(docType != null && docType.compareTo(ValidDocumentTypes.BARCODE.getValue()) == 0) {
+            inflateBarcodeLayout(mrzKeyValueMap);
         }
 
     }
@@ -448,6 +458,32 @@ public class MainActivity extends FragmentActivity {
 
     }
 
+    /**
+     *  Parses and displays Barcode
+     */
+    private void inflateBarcodeLayout(final HashMap<String, String> mrzKeyValueMap) {
+
+        runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+
+                inflateView(R.layout.barcode_layout_inflater);
+
+                //clearAllTextFields();
+
+                if (mrzKeyValueMap.get("documentType") != null) {
+                    ((EditText) findViewById(R.id.documentType)).setText(mrzKeyValueMap.get("documentType"));
+                }
+
+                if (mrzKeyValueMap.get("barcode") != null) {
+
+                    ((EditText) findViewById(R.id.number)).setText(mrzKeyValueMap.get("barcode"));
+                }
+
+            }
+        });
+    }
 
     /**
      *  Parses and displays Passport MRZ elements
