@@ -19,7 +19,11 @@ The Xavier MRZ SDK is capable of performing OCR on travel documents via the nati
 To integrate the Xavier MRZ SDK into your project, you need two Android libraries located in the app libs folder:  
 
 * xavier-release.aar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the Xavier library
-* tess-two-release.aar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the Google Leptonica library  
+* tess-two-release.aar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the Google Leptonica library
+
+The Xavier MRZ SDK is now capable of reading 1D and 2D barcodes. The resulting barcode is returned as a string similar to how MRZ results are returned. To facilitate this new feature, please add the following dependency to your app's gradle build file:
+
+compile 'com.google.android.gms:play-services-vision:12.0.0'
 
 The provided demo project was created using <b>Android Studio IDE version 1.2.2</b>. Please follow the instructions below on setting up and running the Xavier MRZ SDK demo application in Android Studio IDE. Android Studio IDE version 1.2.2 was used to develop the Xavier Evaluation SDK and the demo application. The project is configured to compile at Android API level 22 (Lollipop) andthe minimum Android API level is set to 14 (Ice Scream Sandwich).  
 
