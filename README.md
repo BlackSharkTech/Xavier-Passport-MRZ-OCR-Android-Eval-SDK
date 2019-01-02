@@ -3,7 +3,7 @@
 
 ### Xavier Mrz SDK Android Integration Manual<br>
 #### For Xavier Mrz Android SDK 1.2, October 2017<br>  
-#### By Blackshark Tech, 6811 Spout Ln, Fairfax Station, VA 22039<br>
+#### By Blackshark Tech, Fairfax Station, VA<br>
 **Description**  
 
 The Xavier MRZ SDK contains a demo application that demonstrates the API calls you can use to interact with the Xavier Library. The Xavier MRZ SDK is an Android SDK that enables the developers to integrate the ability to perform OCR i.e. scan on International Civil Aviation Organization (ICAO) compliant two-line passport traveldocuments and three-line ID cards. Some sample documents that Xavier MRZ SDK can process are:
