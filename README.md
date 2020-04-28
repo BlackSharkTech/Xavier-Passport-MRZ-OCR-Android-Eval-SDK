@@ -1,3 +1,7 @@
+## WARNING: THIS IS A DEPRECATED VERSION. Please go to this [link](https://github.com/BlackSharkTech/xavier-demo-android) to get the latest version of the Android SDK.
+
+The new version no longer require an evaluation license.  The unlicensed version will have a warning indicating that it is not license.
+
 ![Xavier Logo](./readme_images/passport_scanning_simplified.jpg)  
 ![Xavier Logo](./readme_images/xavier_logo.jpg)  
 
